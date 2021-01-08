@@ -1,0 +1,11 @@
+<div class="card" *ngIf="cardDetails">
+    <div class="row">
+        <div class="info-section">
+            <h3>{{cardDetails.title}}</h3>
+            <p>{{cardDetails.subTitle}}</p>
+        </div>
+        <div class="icon-section">
+            <img class="icon_cls" src="{{cardDetails.img_url}}">
+        </div>
+    </div>
+</div>
