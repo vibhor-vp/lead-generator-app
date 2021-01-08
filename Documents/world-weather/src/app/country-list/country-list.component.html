@@ -1,0 +1,27 @@
+<div>
+    <div class="row header-container">
+        <h1 class="margin_unset header">COUNTRIES LIST</h1>
+        <button class="cursor-pointer" (click)="changeMode()">Switch to {{_darkMode?'Light':'Dark'}} mode</button>
+    </div>
+    <table cellspacing="0" style="width: 100%;">
+        <tr>
+            <!-- <th>Flags</th> -->
+            <th class="cursor_pointer"
+                (click)="sortCountries(this.currentSortOrder===this.sort_order.asc ? this.sort_order.desc : this.sort_order.asc)">
+                Country <span class="sort_msg">(Click on heading to sort)</span></th>
+        </tr>
+        <tr>
+            <!-- <th></th> -->
+            <th><input type="text" [(ngModel)]="_conutrySearchText" (ngModelChange)="searchCountries($event)"></th>
+        </tr>
+        <tr *ngFor="let country of countriesList">
+            <!-- <td style="width: 30%;">
+                <img src='{{country.flag_icon}}' class="flag-img">
+            </td> -->
+            <td style="width: 70%;" class="cursor_pointer" (click)="onCountryClick(country)">
+                <info-box [infoBoxDetails]="{title: country.name}" [darkModeEnabledSubject]="darkModeEnabledSubject">
+                </info-box>
+            </td>
+        </tr>
+    </table>
+</div>

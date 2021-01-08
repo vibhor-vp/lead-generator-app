@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/scss/margins.scss';
+
+table {
+    font-family: arial, sans-serif;
+    // border-collapse: collapse;
+    // width: 100%;
+    border-spacing:0; /* Removes the cell spacing via CSS */
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    // border: 1px solid #dddddd;
+    text-align: center;
+    // padding: 8px;
+  }
+
+  tr{
+    vertical-align: top;
+    padding: unset !important;
+    border-spacing: unset;
+  }
+
+  .row{
+      display: flex;
+  }
+
+  .cursor_pointer{
+      cursor: pointer;
+  }

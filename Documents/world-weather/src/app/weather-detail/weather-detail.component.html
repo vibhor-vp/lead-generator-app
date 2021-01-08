@@ -1,0 +1,33 @@
+<div class="detail-section">
+    <h1>{{weatherDetails?.capital}}</h1>
+    <div class="row units_section">
+        <div>
+            <input type="radio" class="cursor_pointer" name="unit" [value]=WEATHER_DETAIL_UNITS.METRIC
+                [ngModel]="unitSelected" (change)="unitChanged(WEATHER_DETAIL_UNITS.METRIC)">
+            <label class="radio_label">Metric</label>
+        </div>
+        <div class="margin_left_20">
+            <input type="radio" class="cursor_pointer" name="unit" [value]=WEATHER_DETAIL_UNITS.IMPERIAL
+                [ngModel]="unitSelected" (change)="unitChanged(WEATHER_DETAIL_UNITS.IMPERIAL)">
+            <label class="radio_label">Imperial</label>
+        </div>
+    </div>
+    <div class="detail-container" *ngIf="weatherDetails">
+        <div class="row margin_bottom_20">
+            <div class="card-container">
+                <info-card [cardDetails]="{title: 'TEMPERATURE', subTitle: weatherDetails.main?.temp, 
+                img_url: img_base_url+'temp.svg'}"></info-card>
+            </div>
+            <div class="card-container">
+                <info-card [cardDetails]="{title: 'WIND', subTitle: weatherDetails.wind?.speed, 
+                img_url: img_base_url+'wind.svg'}"></info-card>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-container">
+                <info-card [cardDetails]="{title: 'Precipitation', subTitle: weatherDetails.main?.humidity, 
+                img_url: img_base_url+'precipitation.svg'}"></info-card>
+            </div>
+        </div>
+    </div>
+</div>
