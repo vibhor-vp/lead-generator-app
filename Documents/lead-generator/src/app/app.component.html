@@ -1,0 +1,9 @@
+<div class="navigation_section">
+    <ul class="btn_container">
+        <li><button [routerLink]="['/']" [queryParams]="{user_id: 1}">Create Lead User 1</button></li>
+        <li><button [routerLink]="['/']" [queryParams]="{user_id: 2}">Create Lead User 2</button></li>
+        <li><button [routerLink]="['/listing']" [queryParams]="{user_id: 1}">User1</button></li>
+        <li><button [routerLink]="['/listing']" [queryParams]="{user_id: 2}">User 2</button></li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

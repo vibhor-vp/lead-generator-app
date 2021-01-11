@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/margins.scss';
+@import './styles//modal.scss';
+
+body{
+    background-color: grey;
+}
+
+.center-block{
+    margin: auto;
+    max-width: 380px;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 30px 30px;
+    // margin-top: 100px;
+    background-color: white;
+}
+
+.full_width{
+    width: 100%;
+}
+
+.btn{
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+}
+
+.btn_primary{
+    background-color: blue;
+    color: white;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+.error-class{
+    padding: 7px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    box-sizing: border-box;
+}
+
+.text_align_start{
+    text-align: start;
+}
+
+.text_align_center{
+    text-align: center;
+}
+
+.btn_disabled{
+    cursor: not-allowed;
+    background-color: paleturquoise;
+}
+
+.row{
+    display: flex;
+}
+
+.color_black{
+    color: black;
+}
+
+.color_dark_grey{
+    color: grey;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.center_width_xl{
+    min-width: 1000px;
+}
+
+.font-x-large{
+    font-size: x-large;
+}
+
+.font-large{
+    font-size: large;
+}

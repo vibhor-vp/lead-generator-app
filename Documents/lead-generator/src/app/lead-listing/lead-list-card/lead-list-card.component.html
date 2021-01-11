@@ -1,0 +1,25 @@
+<div class="card-container" *ngIf="leadCardData" [ngStyle]="{'border-top': isFirstCard?'1px solid':null}">
+    <div class="card" (click)="onLeadClick(leadCardData)">
+        <div class="row">
+            <div class="col-1 text_align_center">
+                <img height="80" width="80" src="{{leadCardData.img_url}}">
+            </div>
+            <div class="col-2 card_text">
+                <div class="margin_btm_10">
+                    <span class="card_name color_black">{{leadCardData.user_name}}</span>
+                </div>
+                <div class="margin_btm_10">
+                    <span>{{leadCardData.comments}}</span>
+                </div>
+                <div *ngIf="!isLeadClaimed(leadCardData); else claimText" class="">
+                    <span class="">{{leadCardData.email}}</span>
+                    <span class="card_time">{{leadCardData.phone_number}}</span>
+                </div>
+                <ng-template #claimText>
+                    <span class="color_dark_grey font-bold">Claimed by {{isSelfClaimed(leadCardData)?'you':
+                        leadCardData.claimedBy.name}}</span>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

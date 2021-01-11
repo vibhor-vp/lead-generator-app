@@ -1,0 +1,14 @@
+<div class="modal_wrapper">
+    <div class="modal">
+        <div class="modal-content">
+            <h2 class="margin_btm_10">{{heading}}</h2>
+            <img class="margin_btm_10" height="40" width="40" src="{{img_url}}" alt="icon">
+            <p>
+                {{text}}
+            </p>
+        </div>
+        <div *ngIf="linkText" class="text_align_center">
+            <a href="javascript:void(0)" (click)="onLinkClick()">{{linkText}}</a>
+        </div>
+    </div>
+</div>

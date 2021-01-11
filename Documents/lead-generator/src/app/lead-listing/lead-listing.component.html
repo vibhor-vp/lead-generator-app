@@ -1,0 +1,15 @@
+<div class="listing_wrapper">
+    <div class="center-block center_width_xl">
+        <div class="heading-text">
+            <h1>LEAD CLAIMING PORTAL</h1>
+            <p class="font-large">New Leads will automatically appear at the top of this list. Tap anywhere on lead to
+                claim for yourself.</p>
+        </div>
+        <h4 class="font-x-large">NEW LEADS</h4>
+        <div class="cards-section" *ngIf="leadListingData?.length">
+            <lead-list-card *ngFor="let lead of leadListingData; let first=first" [leadCardData]="lead"
+                [isFirstCard]="first"></lead-list-card>
+        </div>
+    </div>
+</div>
+<toast></toast>

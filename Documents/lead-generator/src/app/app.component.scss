@@ -1,0 +1,31 @@
+.navigation_section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: white;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-left: 50px;
+  }
+
+  button{
+      padding: 10px 5px;
+      background-color: burlywood;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+  }
+
+  .btn_container{
+      margin-top: 5px;
+  }

@@ -1,0 +1,39 @@
+<div class="wrapper" *ngIf="!formSubmittedSuccesfully; else modal">
+    <div class="center-block margin_top_80">
+        <div class="form-container">
+            <h2>Lead Generator</h2>
+            <p>Please enter your contact details and any requirements (e.g. preferences, budget etc)</p>
+            <form class="form-section" (ngSubmit)="onLeadSubmit(leadForm)" #leadForm="ngForm">
+                <div class="form-control-wrapper">
+                    <input class="form-control" type="text" placeholder="Name&#42;" [(ngModel)]="_leadData.user_name"
+                        name="user_name" #userName="ngModel" required>
+
+                    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+                        class="error-class text_align_start">
+                        Name is required
+                    </div>
+                </div>
+                <div class="form-control-wrapper">
+                    <input class="form-control" type="text" placeholder="Email Address" [(ngModel)]="_leadData.email"
+                        name="email">
+                </div>
+                <div class="form-control-wrapper">
+                    <input class="form-control" type="text" placeholder="Phone Number"
+                        [(ngModel)]="_leadData.phone_number" name="phone_number">
+                </div>
+                <div class="form-control-wrapper">
+                    <textarea class="form-control" type="text" rows="10"
+                        placeholder="Please share your requiremnets or comments here" [(ngModel)]="_leadData.comments"
+                        name="comments"></textarea>
+                </div>
+                <button type="submit" class="btn btn_primary full_width cursor_pointer" [disabled]="leadForm.invalid"
+                    [ngClass]="{'btn_disabled': leadForm.invalid}">Register Interest</button>
+            </form>
+        </div>
+    </div>
+</div>
+<ng-template #modal>
+    <success-modal [heading]="'LEAD GENERATOR'" [img_url]="'../../assets/images/tick.jpg'"
+        [text]="'Thanks for submitting your interest! Our sides staff will reach out to you shortly :)'"
+        [linkText]="'Go to lead listing'" (linkClickedEvent)="routeToLeadListing()"></success-modal>
+</ng-template>

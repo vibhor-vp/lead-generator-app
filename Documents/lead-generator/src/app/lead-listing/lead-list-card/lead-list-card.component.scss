@@ -1,0 +1,33 @@
+.card-container{
+    border: 1px solid;
+    border-top: 0px;
+}
+
+.col-1 {
+    float: left;
+    width: 10%;
+    padding: 10px;
+  }
+
+  .col-2 {
+    float: left;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .card_time{
+      float: right;
+  }
+
+.card_name{
+    font-weight: bold;
+}
+
+.card_text{
+    color: grey;
+}
+
+.card{
+    padding: 10px 5px;
+    cursor: pointer;
+}
